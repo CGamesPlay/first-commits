@@ -13,6 +13,7 @@ If we're using some piece of technology, what do we want to get out of it? These
 - [ ] TypeScript is supported (though actual type checking may be done as a separate build step).
 - [ ] The development mode supports automatic reloading or hot module loading.
 - [ ] The project builds into production mode properly.
+- [ ] There is a way to run ad-hoc scripts.
 
 #### Jest
 
