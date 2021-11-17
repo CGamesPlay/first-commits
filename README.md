@@ -8,6 +8,12 @@ All of these projects use TypeScript, ESLint, and Jest. Those targeting the web 
 
 If we're using some piece of technology, what do we want to get out of it? These checklists correspond to manual checks that get done before I consider the first commit done. Many of these checks seem patently obvious, and yet they are all here because they were bugs in the configuration at one point or another.
 
+#### Basics
+
+- [ ] TypeScript is supported (though actual type checking may be done as a separate build step).
+- [ ] The development mode supports automatic reloading or hot module loading.
+- [ ] The project builds into production mode properly.
+
 #### Jest
 
 - [ ] It detects and runs tests.
