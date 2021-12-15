@@ -4,6 +4,10 @@ Man, I hate setting up new projects. It feels like every time I want to try out 
 
 All of these projects use TypeScript, ESLint, and Jest. Those targeting the web use React, although it should generally be easy to remove the React dependency where this is not desired.
 
+## Usage
+
+Copy the subdirectory you want to use into a new git repository.
+
 ## Acceptance Criteria
 
 If we're using some piece of technology, what do we want to get out of it? These checklists correspond to manual checks that get done before I consider the first commit done. Many of these checks seem patently obvious, and yet they are all here because they were bugs in the configuration at one point or another.

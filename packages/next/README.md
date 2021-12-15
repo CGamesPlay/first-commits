@@ -1,8 +1,10 @@
 # Next.js First Commit
 
-This contains the Next.js + Jest starter with some ESLint configuration changes.
+This modifies the basic Next.js TypeScript starter to add a few features:
 
-## Caveats:
-
-- Tests are never type-checked.
-
+- Includes a command runner
+  - Add commands like `lib/cli/greet.ts`
+  - Run them with `next build && yarn cli greet`
+- Use ts-jest so that tests are type checked.
+- Configure ESLint with my opinionated defaults.
+- Enable all of the strict mode checks for React and TypeScript.

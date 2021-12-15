@@ -2,6 +2,7 @@
 const path = require("path");
 
 module.exports = {
+  reactStrictMode: true,
   webpack: (config, { isServer }) => {
     if (!isServer) return config;
     return {

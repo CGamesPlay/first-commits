@@ -31,7 +31,11 @@ module.exports = {
   rules: {
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { ignoreRestSiblings: true, argsIgnorePattern: "^_" },
+      {
+        ignoreRestSiblings: true,
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
     // This rule appears to serve no purpose and the docs don't even attempt to
     // explain why it's a good idea.
@@ -46,5 +50,7 @@ module.exports = {
     // require spending a lot of time to write proper TypeScript types for
     // little gain.
     "@typescript-eslint/no-explicit-any": "off",
+    // Infinite loops are unlikely to be placed by accident.
+    "no-constant-condition": ["error", { checkLoops: false }],
   },
 };
