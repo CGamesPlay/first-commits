@@ -10,8 +10,10 @@ function checkGit() {
     if [ ! -z "$(git status --porcelain . | grep -v '^. ')" ]; then
         if [ $BATS_TEST_NUMBER = 1 ]; then
             pwd >&3
-            echo "There are uncommited changes in the target directory. Bailing." >&3
+            echo "Skipping test due to uncommited changes in git working copy." >&3
             git status . >&3
+        else
+            echo "Skipping test due to uncommited changes in git working copy." >&3
         fi
         skip
     fi
