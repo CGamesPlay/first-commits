@@ -41,3 +41,15 @@ If we're using some piece of technology, what do we want to get out of it? These
 - [ ] The development server allows the import of the static file and returns a URL where it serves the file at.
 - [ ] TypeScript understands the type of the import.
 - [ ] Jest mocks the value to the URL.
+
+### Integration tests
+
+Some of the packages have integration tests useful for verifying behaviors after upgrading the dependencies. To run a particular suite, from the repo root:
+
+```bash
+# Test packages/next
+./test/bats/bin/bats test/next
+# Run the "eslint" test in packages/next
+./test/bats/bin/bats test/next -f "eslint"
+```
+
