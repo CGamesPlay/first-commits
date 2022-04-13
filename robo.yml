@@ -1,0 +1,22 @@
+create:
+  summary: create a project by forking a first-commit package
+  usage: "PACKAGE DEST"
+  command: |
+    cp -Rn packages/"$1"/ "$2"
+    cd "$2"
+    git init .
+    git commit -F - <<EOF
+    Import $1 scaffold
+
+    From https://github.com/CGamesPlay/first-commits
+    EOF
+
+test:
+  summary: run all tests
+  command: |
+    shopt -s extglob
+    for suite in test/!(bats|helper); do
+      echo "Running suite $suite"
+      ./test/bats/bin/bats "$suite"
+      echo ""
+    done

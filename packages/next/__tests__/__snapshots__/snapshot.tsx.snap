@@ -20,7 +20,7 @@ exports[`renders homepage unchanged 1`] = `
     >
       Get started by editing 
       <code>
-        pages/index.js
+        pages/index.tsx
       </code>
     </p>
     <div
