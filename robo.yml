@@ -5,6 +5,7 @@ create:
     cp -Rn packages/"$1"/ "$2"
     cd "$2"
     git init .
+    git add .
     git commit -F - <<EOF
     Import $1 scaffold
 
