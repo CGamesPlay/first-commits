@@ -5,7 +5,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "yarn lint && remix build && REMIX_TARGET=cli remix build",
+    "build": "remix build && REMIX_TARGET=cli remix build",
     "cli": "REMIX_TARGET=cli remix build && node build/cli.js",
     "dev": "remix dev",
     "lint": "tsc -b . && eslint .",

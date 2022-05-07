@@ -11,7 +11,7 @@ create:
     From https://github.com/CGamesPlay/first-commits
     EOF
 
-test:
+test-all:
   summary: run all tests
   command: |
     shopt -s extglob
@@ -20,3 +20,16 @@ test:
       ./test/bats/bin/bats "$suite"
       echo ""
     done
+
+test:
+  summary: run a specific test suite
+  examples:
+    - description: run all tests for remix
+      command: robo test remix
+    - description: run the "eslint" test for remix
+      command: robo test remix -f eslint
+  command: |
+    set -u
+    dir="test/$1"
+    shift
+    ./test/bats/bin/bats "$dir" "$@"

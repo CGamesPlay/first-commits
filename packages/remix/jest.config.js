@@ -10,7 +10,11 @@ module.exports = {
     "^~/(.*)$": "<rootDir>/app/$1",
   },
   setupFilesAfterEnv: ["<rootDir>/test/setup.ts"],
-  testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/build/",
+    "<rootDir>/public/build/",
+  ],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
     // Handle static file imports

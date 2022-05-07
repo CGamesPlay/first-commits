@@ -6,7 +6,15 @@ All of these projects use TypeScript, ESLint, and Jest. Those targeting the web 
 
 ## Usage
 
-Copy the subdirectory you want to use into a new git repository.
+Run `robot create PACKAGE DEST` in the repo root.
+
+```bash
+cd first-commits
+robo create next ~/code/new-project
+cd ~/code/new-project
+yarn
+yarn dev
+```
 
 ## Acceptance Criteria
 
@@ -18,6 +26,10 @@ If we're using some piece of technology, what do we want to get out of it? These
 - [ ] The development mode supports automatic reloading or hot module loading.
 - [ ] The project builds into production mode properly.
 - [ ] There is a way to run ad-hoc scripts.
+
+#### TypeScript
+
+- [ ] It detects errors in files.
 
 #### Jest
 
@@ -44,12 +56,8 @@ If we're using some piece of technology, what do we want to get out of it? These
 
 ### Integration tests
 
-Some of the packages have integration tests useful for verifying behaviors after upgrading the dependencies. To run a particular suite, from the repo root:
+Some of the packages have integration tests useful for verifying behaviors after upgrading the dependencies. For more information, run `robo help` in the repo root.
 
-```bash
-# Test packages/next
-./test/bats/bin/bats test/next
-# Run the "eslint" test in packages/next
-./test/bats/bin/bats test/next -f "eslint"
-```
+## See Also
 
+The helper scripts are managed using [robo](https://github.com/tj/robo). Install robo or look at `robo.yml` for more information.
